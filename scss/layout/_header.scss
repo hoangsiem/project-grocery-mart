@@ -1,0 +1,135 @@
+@use "../abstracts";
+
+%flexItensCenter {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    background-color: var(--header-bg);
+    padding: 30px 0;
+
+    @include abstracts.breakpoint(md) {
+       padding: 16px 0;
+      }
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__more {
+        display: none;
+
+         @include abstracts.breakpoint(lg) {
+            display: block;
+         }
+         @include abstracts.breakpoint(md) {
+            justify-content: space-between;
+         }
+
+    }
+   
+}
+
+.navbar {
+    margin-left: 144px;
+
+    @include abstracts.breakpoint(xl) {
+        margin-left: 50px;
+     }
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+     }
+
+
+    &__list {
+       @extend %flexItensCenter;
+        
+    }
+
+    &__item {
+        &:hover .dropdown {
+            display: block;
+        }
+        
+        &:first-child a {
+            padding-left: 0;
+        }
+        &:last-child a {
+            padding-right: 0;
+        }
+    }
+
+    &__link {
+        @extend %flexItensCenter;
+        column-gap: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%; 
+        height: 50px;
+        padding: 0 15px;
+    }
+
+    &__arrow {
+        margin-top: 3px;
+    }
+}
+
+.top-act {
+    @extend %flexItensCenter;
+    column-gap: 10px;
+    margin-left: auto;
+
+    @include abstracts.breakpoint(md) {
+        margin-left: 0;
+     }
+
+    &__ground {
+        display: flex;
+        align-items: center;
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+         }
+    }
+
+
+    &__btn {
+        @extend %flexItensCenter;
+        padding: 13px 20px;
+        border-radius: 8px;
+        background-color: var(--top-act-btn-bg);
+        box-shadow: 0px 20px 60px 10px var(--top-act-btn-shadow);
+        column-gap: 10px;
+    }
+
+    &__btn-single {
+        padding: 13px;
+
+        @include abstracts.breakpoint(sm) {
+            display: none;
+         }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__seperate {
+        width: 1px;
+        height: 30px;
+        background: var(--top-act-seperate);
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+        display: block;
+    }
+}

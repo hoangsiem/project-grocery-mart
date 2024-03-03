@@ -1,0 +1,16 @@
+html.dark {
+    --text-color: #FFF;
+    --icon-color: brightness(0) saturate(100%) invert(95%) sepia(100%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+
+    --body-bg: #292E39;
+    --header-bg: rgba(23, 28, 40, 1);
+    --top-act-btn-bg: #292E39;
+    --top-act-btn-shadow: rgba(0, 0, 0, 0.20);
+    --top-act-seperate:  #EDEDF6;
+
+     //  Dropdown
+     --dropdown-bg: #333c4e;
+     --dropdown-shadow: rgba(23, 28, 40, 0.40);
+     --dropdown-arrow-color: brightness(0) saturate(100%) invert(19%) sepia(56%) saturate(302%) hue-rotate(182deg) brightness(92%) contrast(88%);
+
+}
